@@ -9,3 +9,4 @@ torchvision==0.15.2
 diffusers==0.19.3
 transformers==4.31.0
 accelerate==0.21.0
+python-dotenv
