@@ -7,7 +7,7 @@ from utils.language_utils import get_language_choice
 import config  # Import the config module
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 def get_user_input():
     print("Choose an option:")
