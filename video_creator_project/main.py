@@ -4,8 +4,7 @@ from agents.speech_agent import SpeechAgent
 from agents.image_agent import ImageAgent
 from agents.video_agent import VideoAgent
 from utils.language_utils import get_language_choice
-import os
-from dotenv import load_dotenv
+import config  # Import the config module
 
 # Load environment variables
 load_dotenv()
@@ -38,10 +37,10 @@ def get_user_input():
         return get_user_input()
 
 def main():
-    # Get API key from environment variable
-    api_key = os.getenv('GEMINI_API_KEY')
+    # Get API key from config.py
+    api_key = config.GEMINI_API_KEY
     if not api_key:
-        raise ValueError("GEMINI_API_KEY not found in environment variables")
+        raise ValueError("GEMINI_API_KEY not found in config.py")
 
     content_agent = ContentAgent(api_key)
     translation_agent = TranslationAgent()
